@@ -10,4 +10,3 @@ function initialize() {
 function takeForm(event) {
   
 }
-function sdfsdf 
