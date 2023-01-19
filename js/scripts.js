@@ -12,6 +12,7 @@ function takeForm(event) {
   let countTo = parseInt(document.getElementById("countTo").value)
   let countBy = parseInt(document.getElementById("countBy").value)
   let numberArray = makeNumberArray(countTo, countBy)
+  displayArray(numberArray)
 }
 
 function makeNumberArray(countTo, countBy) {
