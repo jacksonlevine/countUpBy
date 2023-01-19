@@ -23,6 +23,16 @@ function makeNumberArray(countTo, countBy) {
   return array
 }
 
+function setEntireArrayToNine(array) {
+
+  for(let number = 0; number < array.length; number++) {
+
+    array[number] = 9
+
+  }
+
+}
+
 function makeULFromArray(array) {
   if(array.length === 0) {
     return null;
