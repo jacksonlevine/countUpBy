@@ -8,8 +8,8 @@ function initialize() {
 }
 
 function takeForm(event) {
-  let countTo = document.getElementById("countTo").value
-  let countBy = document.getElementById("countBy").value
+  let countTo = parseInt(document.getElementById("countTo").value)
+  let countBy = parseInt(document.getElementById("countBy").value)
   let numberArray = makeNumberArray(countTo, countBy)
 }
 
