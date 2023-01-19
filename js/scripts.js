@@ -1,12 +1,46 @@
-window.onload = initialize
+//Business Logic
 
+window.onload = initialize
 
 function initialize() {
   let form = document.querySelector("form")
   form.onsubmit = takeForm
 }
 
-
 function takeForm(event) {
-  
+  let countTo = document.getElementById("countTo").value
+  let countBy = document.getElementById("countBy").value
+  let numberArray = makeNumberArray(countTo, countBy)
+}
+
+function makeNumberArray(countTo, countBy) {
+  let array = []
+  for(let i = 0; i < countTo; i+=countBy) {
+    array.push(i)
+  }
+  return array
+}
+
+function makeULFromArray(array) {
+  if(array.length === 0) {
+    return null;
+  }
+  let ul = document.createElement("ul")
+  array.forEach(
+    function(element) {
+      let li = document.createElement("li")
+      li.innerText = element
+      ul.append(li)
+    }
+  )
+  return ul;
+}
+
+//User Interface Logic
+
+function displayArray(array) {
+  let ulFromArray = makeULFromArray(array)
+  let outputSpot = document.getElementById("outputSpot")
+  outputSpot.innerText = ""
+  outputSpot.append(ulFromArray)
 }
